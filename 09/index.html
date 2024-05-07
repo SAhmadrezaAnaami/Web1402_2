@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahmadrzea</title>
+</head>
+<body>
+    <div id="head">
+        <input id="inp" type="text" , value="red">
+    </div>
+    <div id="sections">
+
+    </div>
+    <style>
+        section{
+            height: 200px;
+            width: 200px;
+            background-color: rgb(40, 110, 106);
+            margin-bottom: 30px;
+            text-align: justify;
+            display: inline-block;
+            color: antiquewhite;;
+            margin-right: 10px;
+            margin-left: 10px;
+            padding: 10px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            
+        }
+        body{
+            background-color: rgb(49, 173, 167);
+        }
+        #head{
+            margin-bottom: 30px;
+        }
+    </style>
+    <script>
+        let color
+        document.getElementById("inp").addEventListener("mouseout" , function () {
+            color = document.getElementById("inp").value
+        })
+        let number = 100
+        let sec = ""
+        for (let index = 0; index < number; index++) {
+            sec = sec + "<section id="+ "'sec" + index+ "'"+">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa repellendus maiores dolorem cum possimus perferendis quasi eligendi laboriosam iste aut.</section>"
+        }
+
+        document.getElementById("sections").innerHTML = sec
+        for (let index = 0; index < number; index++) {
+            document.getElementById("sec" + index).addEventListener("mouseover" , function () {
+            document.getElementById("sec"+ index).style.color = color;
+            } , false)
+            document.getElementById("sec"+ index).addEventListener("mouseout" , function () {
+                document.getElementById("sec"+ index).style.color = "antiquewhite";
+            } , false)
+            
+        }
+
+
+        
+    </script>
+    
+</body>
+</html>
